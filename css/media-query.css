@@ -1,0 +1,99 @@
+/* Extra small devices (portrait phones, less than 576px)*/
+/* No media query for `xs` since this is the default in Bootstrap*/
+/*utils*/
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--title-color-mobile);
+  margin: calc(var(--gutter-width) / 2) 0 var(--gutter-width);
+}
+
+h2 {
+  font-size: 24px;
+  margin: calc(var(--gutter-width) / 2) 0 var(--gutter-width);
+  font-weight: bold;
+  color: var(--title-color-mobile);
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+.app-table, .app-desktop {
+  display: none;
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+  header > h2 > a {
+    color: var(--title-color-table);
+  }
+
+  header .app-nav-list > li a {
+    color: var(--title-color-table);
+  }
+
+  header .app-main-btn {
+    background: var(--button-color-table);
+  }
+
+  h1 {
+    color: var(--title-color-table);
+  }
+
+  h2 {
+    color: var(--title-color-table);
+  }
+
+  .app-mobile {
+    display: none;
+  }
+
+  .app-table {
+    display: inline;
+  }
+
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+  .app-table {
+    display: none;
+  }
+
+  .app-desktop {
+    display: inline;
+  }
+}
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+  header > h2 > a {
+    color: var(--title-color-desktop);
+  }
+
+  header .app-nav-list > li a {
+    text-decoration: none;
+    color: var(--title-color-desktop);
+  }
+
+  header .app-main-btn {
+    background: var(--button-color-desktop);
+  }
+
+  h1 {
+    color: var(--title-color-desktop);
+  }
+
+  h2 {
+    color: var(--title-color-desktop);
+  }
+}
