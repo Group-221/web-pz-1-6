@@ -1,0 +1,46 @@
+@media (min-width: 992px) {
+  .app-sidebar {
+    width: 33.33%;
+    margin-top: 0;
+    align-self: stretch;
+  }
+  .app-main {
+    width: 66.66%;
+  }
+}
+
+@media (max-width: 991px) {
+  .app-main-wrap {
+    flex-direction: column;
+  }
+  .app-main,
+  .app-sidebar {
+    width: 100%;
+  }
+  .app-sidebar {
+    margin-top: var(--gutter-width);
+  }
+}
+
+@media (min-width: 992px) {
+  .app-main-wrap {
+    flex-direction: row;
+    align-items: stretch;
+    height: 100%;
+  }
+  .app-main {
+    width: 66.66%;
+    margin-right: var(--gutter-width);
+  }
+  .app-sidebar {
+    width: 33.33%;
+    margin-top: 0;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  footer {
+    margin-top: calc(var(--gutter-width) * 4);
+    width: calc(100% - var(--gutter-width) * 4);
+  }
+}
