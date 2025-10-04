@@ -18,8 +18,10 @@ h2 {
 .clearfix::after {
   content: "";
   clear: both;
-  display: table;
+  display: table;  
+  
 }
+/* sas */
 
 
 .app-table, .app-desktop {
@@ -28,6 +30,7 @@ h2 {
 
 /*Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
+  
 
 }
 
