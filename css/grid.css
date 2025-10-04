@@ -1,0 +1,85 @@
+html {
+  margin: 0;
+  font-size: 14px;
+  font-family: Arial;
+  height: 100%;
+}
+body {
+  height: 100%;
+}
+header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: var(--gutter-width) calc(var(--gutter-width) * 2);
+  height: var(--header-height);
+  box-sizing: border-box;
+  gap: var(--gutter-width);
+}
+header > h2 {
+  margin: 0;
+}
+header > h2 > a {
+  color: var(--title-color-mobile);
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+header > nav {
+  justify-self: center;
+}
+header .app-nav-list {
+  display: flex;
+  gap: var(--gutter-width);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+header .app-nav-list > li a {
+  text-decoration: none;
+  color: var(--title-color-mobile);
+}
+header .app-main-btn {
+  border: none;
+  padding: calc(var(--gutter-width) / 2) var(--gutter-width);
+  background: var(--button-color-mobile);
+  color: white;
+  text-transform: uppercase;
+}
+
+/* main */
+.app-main-wrap {
+  margin: 0 calc(var(--gutter-width) * 2);
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--gutter-width);
+}
+.app-main-wrap .app-main {
+  text-align: center;
+}
+.app-main-wrap .app-sidebar {
+  border: 1px solid #000;
+  box-sizing: border-box;
+  padding: var(--gutter-width);
+  margin-top: var(--gutter-width);
+}
+.app-main-wrap .desc {
+  margin: calc(var(--gutter-width) / 2) 0 var(--gutter-width);
+}
+.app-main-wrap .app-bg-cont img {
+  width: 100%;
+}
+footer {
+  margin: 0 calc(var(--gutter-width) * 2);
+  height: var(--footer-height);
+  text-align: center;
+  overflow: auto;
+  box-sizing: border-box;
+}
+.app-bg-cont .app-mobile,
+.app-bg-cont .app-table,
+.app-bg-cont .app-desktop {
+  display: none !important;
+}
+
