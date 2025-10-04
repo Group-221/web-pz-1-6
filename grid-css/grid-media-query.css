@@ -1,0 +1,65 @@
+@media(min-width: 319px) {
+  header {
+    padding: 20px;
+    height: var(--header-height);
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+  }
+  header .app-nav-list {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+  header > h2 > a {
+    margin-right: -10px;
+  }
+  header .app-main-btn{
+    margin-left: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  header {
+    padding: 20px calc(var(--gutter-width) * 2);
+  }
+  .app-main-wrap {
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+    gap: var(--gutter-width);
+  }
+  .app-main-wrap .app-main {
+    grid-column: 1;
+    grid-row: 1;
+    height: auto;
+  }
+  .app-main-wrap .app-sidebar {
+    grid-column: 2;
+    grid-row: 1;
+    margin-top: 0;
+    height: 520px;
+  }
+}
+
+@media (min-width: 992px) {
+  .app-main-wrap {
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+    gap: var(--gutter-width);
+  }
+  .app-main-wrap .app-main{
+    grid-column: 1;
+    grid-row: 1;
+    height: 100%;
+    margin:0px var(--gutter-width) 0 0;
+  }
+  .app-main-wrap .app-sidebar{
+    grid-column: 2;
+    grid-row: 1;
+    height: 900px;
+    margin:0 0 0 var(--gutter-width);
+  }
+}
