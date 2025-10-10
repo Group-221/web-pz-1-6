@@ -1,0 +1,64 @@
+/* Grid implementation - mobile first */
+html {
+	font-size: 14px;
+	font-family: Arial;
+}
+
+header {
+	padding: var(--gutter-width) calc(var(--gutter-width) * 2);
+	height: var(--header-height);
+	box-sizing: border-box;
+}
+
+header > h2 {
+	margin: 0;
+}
+
+header > h2 > a {
+	color: var(--title-color-mobile);
+	text-decoration: none;
+	font-size: 24px;
+}
+
+header .app-nav-list {
+	display: flex;
+	gap: var(--gutter-width);
+}
+
+header .app-nav-list a {
+	color: var(--title-color-mobile);
+	text-decoration: none;
+}
+
+header .app-main-btn {
+	float: right;
+	border: none;
+	padding: calc(var(--gutter-width) / 2) var(--gutter-width);
+	background: var(--button-color-mobile);
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.app-main-wrap {
+	padding: 0 calc(var(--gutter-width) * 2);
+	box-sizing: border-box;
+}
+
+.app-main {
+	text-align: center;
+}
+
+.app-sidebar {
+	border: 1px solid #000;
+	padding: var(--gutter-width);
+	margin-top: var(--gutter-width);
+}
+
+.app-bg-cont img {
+	width: 100%;
+}
+
+.app-table,
+.app-desktop {
+	display: none;
+}
