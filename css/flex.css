@@ -1,0 +1,79 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  font: 14px/1.4 Arial, sans-serif;
+}
+header {
+  box-sizing: border-box;
+  height: var(--header-height);
+  padding: 20px;
+}
+header > h2 {
+    margin: 0;
+}
+header > h2 > a{
+    color: var(--title-color-mobile);
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+header > nav {
+    margin-top: 7px;
+}
+header .app-nav-list {
+    display: flex;
+    gap: var(--gutter-width);
+}
+header .app-nav-list > li a {
+    text-decoration: none;
+    color: var(--title-color-mobile);
+}
+header .app-main-btn {
+    border: none;
+    padding: calc(var(--gutter-width) / 2) var(--gutter-width);
+    background: var(--button-color-mobile);
+    color: white;
+    text-transform: uppercase;
+    margin-left: auto;
+}
+
+/*main*/
+.app-main-wrap {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: calc(100% - var(--header-height) - var(--footer-height));
+  margin-inline: calc(var(--gutter-width) * 2);
+}
+
+.app-main {
+  width: 100%;
+  text-align: center;
+}
+
+.app-sidebar {
+  width: 100%;
+  margin-top: var(--gutter-width);
+  padding: var(--gutter-width);
+  border: 1px solid #000;
+  box-sizing: border-box;
+}
+
+.desc {
+  margin: calc(var(--gutter-width) / 2) 0 var(--gutter-width);
+}
+
+.app-bg-cont img {
+  display: block;
+  width: 100%;
+}
+
+/*footer*/
+footer {
+  box-sizing: border-box;
+  height: var(--footer-height);
+  margin-inline: calc(var(--gutter-width) * 2);
+  text-align: center;
+  overflow: auto;
+}
+
