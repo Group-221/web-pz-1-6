@@ -1,32 +1,110 @@
-/*Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) {
+/* Small devices (phones, <768px) */
 
+ /* Small devices (phones, <768px) */
+@media (max-width: 767px) {
+  .app-main-wrap .app-main,
+  .app-main-wrap .app-sidebar {
+    float: none;
+    width: 100%;
+    margin: var(--gutter-width) 0 0 0;
+    min-height: auto;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--gutter-width);
+    height: var(--header-height);
+    box-sizing: border-box;
+  }
+
+  header > h2 {
+    float: none;
+    margin: 0;
+    width: auto;
+    line-height: 1;
+    flex: 0 0 auto;
+  }
+
+  header > nav {
+    float: none;
+    width: auto;
+    margin: 0 !important;
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  header .app-nav-list {
+    display: flex;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  header .app-nav-list > li {
+    float: none;
+    margin: 0;
+  }
+
+  header .app-nav-list > li a {
+    display: block;
+    font-size: 14px;
+    padding: 0 4px;
+    color: var(--title-color-mobile);
+    text-decoration: none;
+    line-height: 1;
+  }
+
+  header > .app-main-btn {
+    float: none;
+    margin: 0;
+    min-width: 70px;
+    padding: 0 12px;
+    text-align: center;
+    line-height: 40px;
+    flex: 0 0 auto;
+  }
+
+  header .clearfix {
+    display: none;
+  }
 }
 
-/*Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) {
+/* Medium devices (tablets, 768px – 991px) */
+@media (width: 768px) and (max-width: 991px) {
+  .app-main-wrap .app-main {
+    float: left;
+    width: calc(65% - var(--gutter-width));
+    margin: 0 var(--gutter-width) 0 0;
+    box-sizing: border-box;
+  }
 
-
+  .app-main-wrap .app-sidebar {
+    float: left;
+    width: calc(35% - var(--gutter-width));
+    margin: 0;
+    box-sizing: border-box;
+    min-height: calc(120vh - var(--header-height) - var(--footer-height));
+  }
 }
 
-/*Large devices (desktops, 992px and up)*/
+/* Large devices (desktops, ≥992px) */
 @media (min-width: 992px) {
-  .app-main-wrap .app-main{
+  .app-main-wrap .app-main {
     float: left;
     width: calc(75% - var(--gutter-width));
-    height: 100%;
-    margin:0 var(--gutter-width) 0 0;
+    margin: 0 var(--gutter-width) 0 0;
+    box-sizing: border-box;
   }
 
-  .app-main-wrap .app-sidebar{
+  .app-main-wrap .app-sidebar {
     float: left;
     width: calc(25% - var(--gutter-width));
-    height: 100%;
-    margin:0 0 0 var(--gutter-width);
+    margin: 0;
+    box-sizing: border-box;
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
   }
-}
-
-/*Extra large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px) {
-
 }

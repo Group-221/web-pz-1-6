@@ -1,7 +1,7 @@
 :root {
   --title-color-mobile: red;
-  --title-color-table: green;
-  --title-color-desktop: blue;
+  --title-color-table: blue;
+  --title-color-desktop: green;
 
   --button-color-mobile: blue;
   --button-color-table: brown;
