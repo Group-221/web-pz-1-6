@@ -28,36 +28,37 @@ header > nav {
     margin-top: 7px;
 }
 
-header .app-nav-list > li{
+header .primary-nav-menu > li{
     float: left;
     margin-left: var(--gutter-width);
 }
-header .app-nav-list > li a {
+header .primary-nav-menu > li a {
     text-decoration: none;
     color: var(--title-color-mobile);
 }
-header .app-main-btn {
+header .cta-button {
     border: none;
     padding: calc(var(--gutter-width) / 2) var(--gutter-width);
     background: var(--button-color-mobile);
     color: white;
     text-transform: uppercase;
 }
-header > .app-main-btn {
+header > .cta-button {
     float: right;
 }
 
 /*main*/
-.app-main-wrap {
+.content-wrapper {
     margin: 0 calc(var(--gutter-width) * 2);
-    height: calc(100% - var(--header-height) - var(--footer-height));
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
     box-sizing: border-box;
+    overflow: hidden;
 }
-.app-main-wrap .app-main{
+.content-wrapper .main-content{
     text-align: center;
     width: 100%;
 }
-.app-main-wrap .app-sidebar{
+.content-wrapper .secondary-content{
     border: 1px solid #000;
     float: left;
     width: 100%;
@@ -65,17 +66,19 @@ header > .app-main-btn {
     padding: var(--gutter-width);
     margin-top: var(--gutter-width);
 }
-.app-main-wrap .desc {
+.content-wrapper .description {
     margin: calc(var(--gutter-width) / 2) 0 var(--gutter-width);
 }
-.app-main-wrap .app-bg-cont img{
+.content-wrapper .image-container img{
     width: 100%;
 }
 footer {
     margin: 0 calc(var(--gutter-width) * 2);
-    height: var(--footer-height);
+    min-height: var(--footer-height);
     text-align: center;
     overflow: auto;
     box-sizing: border-box;
+    clear: both;
+    padding: var(--gutter-width) 0;
 }
 

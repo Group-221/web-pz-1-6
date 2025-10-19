@@ -11,18 +11,22 @@
 
 /*Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
-  .app-main-wrap .app-main{
+  .content-wrapper {
+    min-height: auto;
+  }
+  
+  .content-wrapper .main-content{
     float: left;
     width: calc(75% - var(--gutter-width));
-    height: 100%;
     margin:0 var(--gutter-width) 0 0;
   }
 
-  .app-main-wrap .app-sidebar{
+  .content-wrapper .secondary-content{
     float: left;
     width: calc(25% - var(--gutter-width));
-    height: 100%;
     margin:0 0 0 var(--gutter-width);
+    margin-top: 0;
+    min-height: 800px;
   }
 }
 

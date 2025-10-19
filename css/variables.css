@@ -1,13 +1,13 @@
 :root {
-  --title-color-mobile: red;
-  --title-color-table: green;
-  --title-color-desktop: blue;
+  --title-color-mobile: #7f4ca9;
+  --title-color-table: #e67e22;
+  --title-color-desktop: #16a085;
 
-  --button-color-mobile: blue;
-  --button-color-table: brown;
-  --button-color-desktop: red;
+  --button-color-mobile: #e74c3c;
+  --button-color-table: #3498db;
+  --button-color-desktop: #9b59b6;
 
-  --gutter-width: 20px;
-  --header-height: 100px;
-  --footer-height: 100px;
+  --gutter-width: 18px;
+  --header-height: 85px;
+  --footer-height: 95px;
 }

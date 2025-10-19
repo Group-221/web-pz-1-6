@@ -22,7 +22,7 @@ h2 {
 }
 
 
-.app-table, .app-desktop {
+.tablet-view, .desktop-view {
   display: none;
 }
 
@@ -37,11 +37,11 @@ h2 {
     color: var(--title-color-table);
   }
 
-  header .app-nav-list > li a {
+  header .primary-nav-menu > li a {
     color: var(--title-color-table);
   }
 
-  header .app-main-btn {
+  header .cta-button {
     background: var(--button-color-table);
   }
 
@@ -53,11 +53,11 @@ h2 {
     color: var(--title-color-table);
   }
 
-  .app-mobile {
+  .mobile-view {
     display: none;
   }
 
-  .app-table {
+  .tablet-view {
     display: inline;
   }
 
@@ -65,11 +65,11 @@ h2 {
 
 /*Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
-  .app-table {
+  .tablet-view {
     display: none;
   }
 
-  .app-desktop {
+  .desktop-view {
     display: inline;
   }
 }
@@ -80,12 +80,12 @@ h2 {
     color: var(--title-color-desktop);
   }
 
-  header .app-nav-list > li a {
+  header .primary-nav-menu > li a {
     text-decoration: none;
     color: var(--title-color-desktop);
   }
 
-  header .app-main-btn {
+  header .cta-button {
     background: var(--button-color-desktop);
   }
 
