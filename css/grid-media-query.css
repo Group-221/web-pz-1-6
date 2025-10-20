@@ -1,0 +1,25 @@
+/* MOBILE — default */
+.app-mobile { display: block; }
+.app-table, .app-desktop { display: none; }
+
+/* TABLET */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .app-main-wrap {
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: "main sidebar";
+  }
+
+  .app-mobile { display: none; }
+  .app-table { display: block; }
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+  .app-main-wrap {
+    grid-template-columns: 4fr 1fr;
+    grid-template-areas: "main sidebar";
+  }
+
+  .app-mobile, .app-table { display: none; }
+  .app-desktop { display: block; }
+}

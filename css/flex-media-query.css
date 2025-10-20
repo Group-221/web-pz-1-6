@@ -1,0 +1,15 @@
+/* MOBILE — default */
+.app-mobile { display: block; }
+.app-table, .app-desktop { display: none; }
+
+/* TABLET */
+@media (min-width: 600px) and (max-width: 991px) {
+  .app-mobile { display: none; }
+  .app-table { display: block; }
+}
+
+/* DESKTOP */
+@media (min-width: 992px) {
+  .app-mobile, .app-table { display: none; }
+  .app-desktop { display: block; }
+}
