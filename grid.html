@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PZ_1_6 Grid</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/grid.css">
+  <link rel="stylesheet" href="css/grid-media-query.css">
+</head>
+<body>
+<header>
+  <h2><a href="#">Header</a></h2>
+  <nav>
+    <ul class="app-nav-list">
+      <li><a href="#">nav link 1</a></li>
+      <li><a href="#">nav link 2</a></li>
+      <li><a href="#">nav link 3</a></li>
+    </ul>
+  </nav>
+  <button class="app-main-btn">BUTTON</button>
+</header>
+
+<div class="app-main-wrap">
+  <section class="app-main">
+    <h1>Grid Layout</h1>
+    <p>This is the grid version. You should always see an image below.</p>
+
+    <div class="app-bg-cont">
+      <picture>
+        <source media="(min-width: 1024px)" srcset="img/main-desktop.jpg">
+        <source media="(min-width: 768px)" srcset="img/main-table.jpg">
+        <img src="img/main-mobile.jpg" alt="main responsive image">
+      </picture>
+    </div>
+  </section>
+
+  <aside class="app-sidebar">
+    <h2>Sidebar</h2>
+  </aside>
+</div>
+
+<footer>
+  <h2>Footer</h2>
+</footer>
+<script src="js/check-images.js"></script>
+</body>
+</html>

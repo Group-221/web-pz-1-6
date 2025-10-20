@@ -1,0 +1,82 @@
+/* ------------------------------
+   Base styles
+------------------------------ */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  background: #e6e6ff;
+  padding: 15px;
+}
+
+header h2 a {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+.app-nav-list {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.app-nav-list a {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+.app-main-btn {
+  background: #0000ff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+/* Layout */
+.app-main-wrap {
+  display: grid;
+  grid-template-areas:
+    "main"
+    "sidebar";
+  gap: 20px;
+  padding: 20px;
+}
+
+.app-main {
+  grid-area: main;
+}
+
+.app-sidebar {
+  grid-area: sidebar;
+  border: 1px solid #000;
+  padding: 15px;
+}
+
+/* ------------------------------
+   IMAGE FIX — Always visible
+------------------------------ */
+.app-bg-cont img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 3px solid lime;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #f0f0ff;
+  color: #0000ff;
+}
