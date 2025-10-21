@@ -1,81 +1,60 @@
-html {
-    margin: 0;
-    font-size: 14px;
-    font-family: Arial;
-    height: 100%;
-}
-body {
-    height: 100%;
-}
+/* Custom float layout for pz-1-6 (c) 2025 */
+
+html { height: 100%; font-size: 14px; font-family: Arial; }
+body { height: 100%; margin: 0; }
+
+/* ===== Header (FLOAT) ===== */
 header {
-    padding: var(--gutter-width) calc(var(--gutter-width) * 2);
-    height: var(--header-height);
-    box-sizing: border-box;
+  padding: var(--gutter-width) calc(var(--gutter-width) * 2);
+  box-sizing: border-box;
+  /* висоту хедера беремо з контенту; var(--header-height) лишається для формул у разі потреби */
 }
-header > h2 {
-    float: left;
-    vertical-align: middle;
-    margin: 0;
+header > h2 { float: left; margin: 0; vertical-align: middle; }
+header > h2 > a {
+  color: var(--title-color-mobile);
+  font-size: 24px; font-weight: bold; text-decoration: none;
 }
-header > h2 > a{
-    color: var(--title-color-mobile);
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: none;
-}
-header > nav {
-    float: left;
-    margin-top: 7px;
-}
-
-header .app-nav-list > li{
-    float: left;
-    margin-left: var(--gutter-width);
-}
-header .app-nav-list > li a {
-    text-decoration: none;
-    color: var(--title-color-mobile);
-}
+header > nav { float: left; margin-top: 7px; }
+header .app-nav-list > li { float: left; margin-left: var(--gutter-width); }
+header .app-nav-list > li a { text-decoration: none; color: var(--title-color-mobile); }
 header .app-main-btn {
-    border: none;
-    padding: calc(var(--gutter-width) / 2) var(--gutter-width);
-    background: var(--button-color-mobile);
-    color: white;
-    text-transform: uppercase;
+  float: right;
+  border: none;
+  padding: calc(var(--gutter-width) / 2) var(--gutter-width);
+  
+  text-transform: uppercase;
 }
-header > .app-main-btn {
-    float: right;
-}
+/* утиліта для float */
+.clearfix::after { content: ""; display: table; clear: both; }
 
-/*main*/
+/* ===== Main wrapper ===== */
 .app-main-wrap {
-    margin: 0 calc(var(--gutter-width) * 2);
-    height: calc(100% - var(--header-height) - var(--footer-height));
-    box-sizing: border-box;
+  margin: 0 calc(var(--gutter-width) * 2);
+  box-sizing: border-box;
 }
-.app-main-wrap .app-main{
-    text-align: center;
-    width: 100%;
-}
-.app-main-wrap .app-sidebar{
-    border: 1px solid #000;
-    float: left;
-    width: 100%;
-    box-sizing: border-box;
-    padding: var(--gutter-width);
-    margin-top: var(--gutter-width);
-}
-.app-main-wrap .desc {
-    margin: calc(var(--gutter-width) / 2) 0 var(--gutter-width);
-}
-.app-main-wrap .app-bg-cont img{
-    width: 100%;
-}
-footer {
-    margin: 0 calc(var(--gutter-width) * 2);
-    height: var(--footer-height);
-    text-align: center;
-    overflow: auto;
-    box-sizing: border-box;
+/* ще раз гарантуємо, що футер не заїде на флоати всередині */
+.app-main-wrap::after { content: ""; display: block; clear: both; }
+
+/* основна колонка (на мобілі одна колонка) */
+.app-main { width: 100%; text-align: center; }
+.app-main .desc { margin: calc(var(--gutter-width) / 2) 0 var(--gutter-width); }
+.app-bg-cont img { width: 100%;}
+
+/* сайдбар на мобілі під контентом */
+.app-sidebar{
+  float: left;
+  width: 100%;
+  padding: var(--gutter-width);
+  margin-top: var(--gutter-width);
+  box-sizing: border-box;
+  border: 1px solid #000;
 }
 
+/* ===== Footer ===== */
+footer {
+  margin: 0 calc(var(--gutter-width) * 2);
+  text-align: center;
+  padding: var(--gutter-width) 0;
+  box-sizing: border-box;
+  clear: both; /* критично для float: футер завжди під основним вмістом */
+}

@@ -1,32 +1,89 @@
-/*Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) {
-
+/* ===== MOBILE-FIRST (<768px) ===== */
+/* 1) Єдиний колір для заголовків, Header, нав-лінків і кнопки */
+h1,
+h2,
+header > h2 > a,
+header .app-nav-list > li a {
+  color: var(--title-color-mobile);
+}
+header .app-main-btn {
+  background: var(--title-color-mobile);
+  color: #fff;
 }
 
-/*Medium devices (tablets, 768px and up)*/
+/* 2) Видимість картинок (за замовчуванням показуємо mobile) */
+.app-bg-cont img.app-mobile  { display: block; }
+.app-bg-cont img.app-table,
+.app-bg-cont img.app-desktop { display: none; }
+
+/* ===== Small devices (≥576px) ===== */
+@media (min-width: 576px) {}
+
+/* ===== Tablet (≥768px) ===== */
 @media (min-width: 768px) {
+  /* колір синхронно для всього Header/Title/Button */
+  h1,
+  h2,
+  header > h2 > a,
+  header .app-nav-list > li a {
+    color: var(--title-color-table);
+  }
+  header .app-main-btn {
+    background: var(--title-color-table);
+    color: #fff;
+  }
 
-
+  /* картинка для планшета */
+  .app-bg-cont img.app-mobile  { display: none; }
+  .app-bg-cont img.app-table   { display: block; }
+  .app-bg-cont img.app-desktop { display: none; }
 }
 
-/*Large devices (desktops, 992px and up)*/
+/* ===== Desktop (≥992px) ===== */
+/* за бажанням можеш вже тут вмикати desktop-колір; за замовчуванням чекаємо ≥1200px */
+/* Large devices (desktops, ≥992px) */
 @media (min-width: 992px) {
+  /* ліва колонка (контент) */
   .app-main-wrap .app-main{
     float: left;
     width: calc(75% - var(--gutter-width));
-    height: 100%;
-    margin:0 var(--gutter-width) 0 0;
+    margin: 0 var(--gutter-width) 0 0;
+    box-sizing: border-box;
+    clear: none;        /* гарантуємо, що не переноситиметься вниз */
   }
 
+  /* права колонка (сайдбар) */
   .app-main-wrap .app-sidebar{
     float: left;
     width: calc(25% - var(--gutter-width));
-    height: 100%;
-    margin:0 0 0 var(--gutter-width);
+    margin: 0 0 0 var(--gutter-width);
+    box-sizing: border-box;
+    margin-top: 0;      /* скидаємо мобільний відступ зверху */
+    clear: none;        /* на всяк випадок скидаємо clear */
+  }
+
+  /* трохи простору над зображенням, щоб не "висіло" */
+  .app-bg-cont { 
+    margin-top: calc(var(--gutter-width) * 1.25); 
   }
 }
 
-/*Extra large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px) {
 
+/* ===== Large Desktop (≥1200px) ===== */
+@media (min-width: 1200px) {
+  h1,
+  h2,
+  header > h2 > a,
+  header .app-nav-list > li a {
+    color: var(--title-color-desktop);
+  }
+  header .app-main-btn {
+    background: var(--title-color-desktop);
+    color: #fff;
+  }
+
+  /* картинка для десктопа */
+  .app-bg-cont img.app-mobile  { display: none; }
+  .app-bg-cont img.app-table   { display: none; }
+  .app-bg-cont img.app-desktop { display: block; }
 }
