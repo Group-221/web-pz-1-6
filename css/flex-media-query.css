@@ -1,0 +1,28 @@
+/* Flex media queries to match layout breakpoints */
+/* Медіа-запити для flex-варіанту: змінюють кольори та структуру layout для більших екранів */
+@media (min-width: 768px) {
+  header > h2 > a { color: var(--title-color-table); }
+  header .app-nav-list a { color: var(--title-color-table); }
+  .app-main-btn { background: var(--button-color-table); }
+  h1 { color: var(--title-color-table); }
+  h2 { color: var(--title-color-table); }
+  .app-mobile { display: none; }
+  .app-table { display: inline; }
+}
+
+@media (min-width: 992px) {
+  .app-table { display: none; }
+  .app-desktop { display: inline; }
+
+  .app-main-wrap { display: flex; gap: var(--gutter-width); align-items: stretch; }
+  .app-main { flex: 3; }
+  .app-sidebar { flex: 1; margin-top: 0; }
+}
+
+@media (min-width: 1200px) {
+  header > h2 > a { color: var(--title-color-desktop); }
+  header .app-nav-list a { color: var(--title-color-desktop); }
+  .app-main-btn { background: var(--button-color-desktop); }
+  h1 { color: var(--title-color-desktop); }
+  h2 { color: var(--title-color-desktop); }
+}

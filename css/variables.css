@@ -1,13 +1,20 @@
 :root {
-  --title-color-mobile: red;
-  --title-color-table: green;
-  --title-color-desktop: blue;
+  /*
+    Змінні CSS (CSS custom properties)
+    Використовуються по всьому макету для спрощення підтримки:
+    - кольори заголовків для різних брейкпоінтів
+    - кольори кнопок для різних розмірів екранів
+    - відступи (gutter) та висота header/footer
+  */
+  --title-color-mobile: red; /* колір заголовків на мобайлі */
+  --title-color-table: green; /* колір заголовків на планшеті */
+  --title-color-desktop: blue; /* колір заголовків на десктопі */
 
-  --button-color-mobile: blue;
-  --button-color-table: brown;
-  --button-color-desktop: red;
+  --button-color-mobile: blue; /* фон кнопки на мобайлі */
+  --button-color-table: brown; /* фон кнопки на планшеті */
+  --button-color-desktop: red; /* фон кнопки на десктопі */
 
-  --gutter-width: 20px;
-  --header-height: 100px;
-  --footer-height: 100px;
+  --gutter-width: 20px; /* базовий відступ/проміжок */
+  --header-height: 100px; /* висота шапки */
+  --footer-height: 100px; /* висота футера */
 }

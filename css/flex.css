@@ -1,0 +1,47 @@
+
+/* Flexbox implementation - mobile first */
+html { font-size: 14px; font-family: Arial; }
+
+header, .site-header{
+  padding: var(--gutter-width) calc(var(--gutter-width) * 2);
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+/* Flexbox implementation - mobile first */
+/*
+  flex.css — реалізація макету з використанням Flexbox.
+  Тут:
+  - header зроблений як flex-контейнер для вирівнювання логотипа, навігації та кнопки
+  - основна обгортка залишається адаптивною, а на більших екранах layout змінюється у відповідних медіа-файлах
+*/
+html { font-size: 14px; font-family: Arial; }
+
+header, .site-header{
+  padding: var(--gutter-width) calc(var(--gutter-width) * 2);
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+header > h2 { margin: 0; }
+header > h2 > a { color: var(--title-color-mobile); font-size: 24px; text-decoration: none; }
+
+.app-nav-list { display:flex; gap: var(--gutter-width); margin:0; padding:0; }
+.app-nav-list a { color: var(--title-color-mobile); text-decoration:none; }
+.app-main-btn{ border: none; padding: calc(var(--gutter-width)/2) var(--gutter-width); background: var(--button-color-mobile); color:#fff; text-transform:uppercase; }
+
+.app-main-wrap{ padding: 0 calc(var(--gutter-width) * 2); box-sizing:border-box; }
+.app-main{ text-align:center; }
+.app-sidebar{ border:1px solid #000; padding: var(--gutter-width); margin-top: var(--gutter-width); }
+.app-bg-cont img{ width:100%; }
+
+/* hide table/desktop images on mobile */
+.app-table, .app-desktop { display:none; }
+
+.clearfix::after{ content: ""; display: table; clear: both; }
