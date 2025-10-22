@@ -1,0 +1,20 @@
+/* Планшети */
+@media (max-width: 1024px) {
+  .app-main-wrap {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+/* Мобільні */
+@media (max-width: 768px) {
+  .header {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .app-main-wrap {
+    grid-template-columns: 1fr;
+  }
+  .top-btn {
+    margin-top: 10px;
+  }
+}
