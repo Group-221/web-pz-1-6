@@ -1,0 +1,23 @@
+@media (max-width: 992px) {
+  .app-main-wrap {
+    flex-direction: column;
+  }
+  .app-sidebar {
+    margin-top: 20px;
+  }
+  header {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .app-nav-list {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  .app-main-btn {
+    align-self: center;
+  }
+}

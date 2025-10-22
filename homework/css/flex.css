@@ -1,0 +1,89 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #111;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+header h2 a {
+  text-decoration: none;
+  color: #0a7a1c; /* зелений як на прикладі */
+  font-weight: bold;
+}
+.app-nav-list {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+.app-nav-list a {
+  text-decoration: none;
+  color: #0a7a1c;
+}
+.app-main-btn {
+  padding: 8px 16px;
+  background: #a52323;      /* темно-червона кнопка */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Основна частина з сайдбаром */
+.app-main-wrap {
+  display: flex;
+  gap: 20px;
+}
+.app-main {
+  flex: 3;
+}
+.app-main h1 {
+  color: #0a7a1c;           /* зелений заголовок */
+  text-align: center;
+}
+.desc {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.app-bg-cont img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.app-sidebar {
+  flex: 1;
+  border: 1px solid #444;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.app-sidebar h2 {
+  color: #0a7a1c;           /* зелений заголовок сайдбару */
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+}
+footer h2 {
+  color: #0a7a1c;
+}
