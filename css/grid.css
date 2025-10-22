@@ -1,0 +1,22 @@
+/* Grid layout base styles (mobile-first) */
+body{ background:#0f0f0f; color:#111; font-family: Arial, Helvetica, sans-serif; }
+.container{ width: calc(100% - 40px); max-width: 720px; margin:0 auto; padding:20px 0; }
+.site-header{ background:#111; color:#fff; padding:10px 0; }
+.header-inner{ display:flex; align-items:center; justify-content:space-between; }
+.logo{ color: var(--title-color-table); font-weight:700; font-size:24px; }
+.nav{ display:flex; gap:12px; }
+.nav a{ color: var(--title-color-table); text-decoration:none; }
+.cta{ background: var(--button-color-mobile); color:#fff; border:none; padding:8px 14px; border-radius:4px; }
+
+.page-title{ text-align:center; color:var(--title-color-table); font-size:32px; margin-bottom:10px; }
+.lead{ text-align:center; color:#666; font-size:14px; margin:0 auto 14px; max-width:640px; }
+
+.grid-wrap{ display:block; }
+.content{ margin-bottom:18px; }
+.hero{ display:block; width:100%; height:auto; border:6px solid #fff; }
+
+.sidebar-box{ background:#fff; border:2px solid #444; padding:20px; color:var(--title-color-table); font-weight:700; }
+
+.site-footer{ color:#fff; padding:14px 0 30px; }
+.footer-inner{ text-align:center; }
+.footer-title{ color:var(--title-color-table); font-weight:700; margin-bottom:8px; }

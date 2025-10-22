@@ -1,0 +1,30 @@
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+  .page-title{ font-size:36px; }
+  .hero{ max-width:640px; }
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+  .header-inner{ gap:20px; }
+  .page-title{ color: var(--title-color-table); }
+  .cta{ background: var(--button-color-table); }
+}
+
+/* Large devices (desktops, 992px and up)
+   Keep stacked layout so sidebar remains below the main/photo.
+*/
+@media (min-width: 992px) {
+  .container{ max-width: 1000px; }
+  /* keep stacked layout: sidebar stays below the main/photo */
+  .app-main-wrap{ flex-direction:column; gap:var(--gutter-width); }
+  .app-main{ margin:0 auto; max-width:800px; }
+  .app-sidebar{ margin:0 auto; max-width:800px; padding:20px; }
+  .page-title{ color: var(--title-color-desktop); font-size:42px; }
+  .cta{ background: var(--button-color-desktop); }
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+  .container{ max-width: 1200px; }
+}
