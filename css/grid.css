@@ -1,0 +1,111 @@
+/* Глобальна змінна для мобільної теми */
+body { 
+    --mobile-accent: green; 
+    --desktop-accent: green;
+    color : green;
+}
+a:hover {
+    color: #00ff00;
+}
+/* Основні (мобільні) стилі */
+body {
+    font-family: "Arial", sans-serif;
+    color: green;
+}
+h1, h2, h3, h4, h5, h6, p, a, .title, .main-content, .sidebar, .footer, .container {
+    color: green !important;
+}
+
+.container {
+    width: 90%;
+    margin-inline: auto;
+}
+
+/* Верхній блок (Topbar) */
+.topbar .wrapper {
+    display: grid;
+    grid-template-areas:
+        "brand"
+        "menu"
+        "action";
+    justify-items: center;
+    row-gap: 10px;
+    padding-block: 15px;
+}
+
+.topbar .brand { grid-area: brand; }
+.topbar .menu { grid-area: menu; }
+.topbar .action-btn { grid-area: action; }
+
+.topbar .brand,
+.topbar .menu a {
+    color: var(--mobile-accent);
+    font-weight: 700;
+}
+
+.topbar .menu {
+    display: grid;
+    row-gap: 5px;
+    justify-items: center;
+}
+
+.topbar .menu a {
+    color: var(--menu-link-color);
+    text-decoration: none;
+}
+
+.action-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--mobile-btn-bg);
+    color: var(--btn-text-color);
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 6px;
+}
+
+/* Основний контент сторінки */
+.page-body {
+    display: grid;
+    grid-template-columns: 1fr; /* Один стовпчик на мобільному */
+    row-gap: 20px;
+    padding-block: 20px;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--mobile-accent);
+    margin-bottom: 15px;
+}
+
+.article p {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+}
+
+/* Бічна панель */
+.side-panel {
+    border: 2px solid var(--border-tone);
+    min-height: 200px;
+    padding: 20px;
+}
+
+.side-panel h2 {
+    color: var(--mobile-accent);
+}
+
+/* Нижня частина (Footer) */
+.bottom {
+    text-align: center;
+    padding-block: 20px;
+}
+
+.bottom h2 {
+    margin-bottom: 10px;
+    color: var(--mobile-accent);
+}

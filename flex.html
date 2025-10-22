@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid & Flex Layout</title>
+
+    <!-- Підключення стилів -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/flex.css">
+    <link rel="stylesheet" href="css/flex-media-query.css">
+</head>
+<body>
+
+    <!-- Верхня частина сайту -->
+    <header class="topbar">
+        <div class="wrapper">
+            <h1 class="brand">Topbar</h1>
+            <nav class="menu">
+                <a href="#">Menu item 1</a>
+                <a href="#">Menu item 2</a>
+                <a href="#">Menu item 3</a>
+            </nav>
+            <a href="#" class="action-btn">CLICK</a>
+        </div>
+    </header>
+
+    <!-- Основна частина сторінки -->
+    <div class="wrapper">
+        <main class="page-body">
+            <article class="article">
+                <h1 class="section-title">Page Title</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Suspendisse varius enim in eros elementum tristique. 
+                    Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, 
+                    ut commodo diam libero vitae erat. 
+                    Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. 
+                    Nunc ut sem vitae risus tristique posuere.
+                </p>
+
+                <picture>
+                    <source media="(min-width: 1024px)" srcset="img/main-desktop.jpg">
+                    <source media="(min-width: 768px)" srcset="img/main-table.jpg">
+                   <img src="img/main-mobile.jpg" alt="forest" class="hero-img">
+
+                </picture>
+            </article>
+
+            <aside class="side-panel">
+                <h2>Sidebar content</h2>
+            </aside>
+        </main>
+    </div>
+
+    <!-- Нижня частина сайту -->
+    <footer class="bottom">
+        <div class="wrapper">
+            <h2>Footer</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Nulla facilisi. Aenean sed imperdiet arcu. 
+                Suspendisse vel turpis lectus.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

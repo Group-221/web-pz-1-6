@@ -1,0 +1,107 @@
+/* Глобальні змінні кольорів для пристроїв */
+body { 
+    --mobile-accent: red;
+    --tablet-accent: red; 
+    --desktop-accent: red; 
+    --text-tone: red; /* використовуємо для глобального тексту */
+}
+
+/* Базові стилі (спочатку для мобільних пристроїв) */
+body {
+    font-family: "Arial", sans-serif;
+    color: var(--text-tone);
+}
+
+.wrapper {
+    width: 90%;
+    margin-inline: auto;
+}
+
+/* Шапка сайту */
+.topbar .wrapper {
+    display: flex;
+    flex-direction: column; /* Вертикальне розташування елементів */
+    align-items: center;
+    padding-block: 15px;
+}
+
+.topbar .brand,
+.topbar .menu a {
+    font-weight: 700;
+    color: var(--mobile-accent);
+}
+
+.topbar .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block: 10px;
+}
+
+.topbar .menu a {
+    margin-block: 5px;
+    color: var(--menu-link-color);
+    text-decoration: none;
+}
+
+.action-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 6px;
+    background: var(--mobile-btn-bg);
+    color: var(--btn-text-color);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* Основний контент */
+.page-body {
+    display: flex;
+    flex-direction: column;
+    padding-block: 20px;
+}
+
+.section-title {
+    color: var(--mobile-accent);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.article p {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Бічна панель */
+.side-panel {
+    border: 2px solid var(--border-tone);
+    padding: 20px;
+    min-height: 200px;
+    margin-bottom: 20px;
+    order: 2; /* Sidebar після контенту */
+}
+
+.article {
+    order: 1;
+}
+
+.side-panel h2 {
+    color: var(--mobile-accent);
+}
+
+/* Нижня частина сайту */
+.bottom {
+    text-align: center;
+    padding-block: 20px;
+}
+
+.bottom h2 {
+    margin-bottom: 10px;
+    color: var(--mobile-accent);
+}
