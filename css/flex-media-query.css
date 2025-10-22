@@ -1,0 +1,54 @@
+/* Адаптація для планшетів і комп’ютерів (FLEXBOX) */
+@media screen and (min-width: 768px) {
+
+    /* Верхня частина сайту */
+    .topbar .wrapper {
+        display: flex;
+        flex-direction: row; /* Розташування елементів у ряд */
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .topbar .menu {
+        display: flex;
+        flex-direction: row; /* Горизонтальне меню */
+        order: 1; /* Розташувати перед кнопкою */
+        margin: 0;
+    }
+
+    .topbar .menu a {
+        margin: 0 12px;
+    }
+
+    .topbar .brand {
+        order: 0; /* Логотип перший */
+    }
+
+    .topbar .action-btn {
+        order: 2; /* Кнопка після меню */
+    }
+
+    /* Основна частина сторінки */
+    .page-body {
+        display: flex;
+        flex-direction: row; /* Основний контент і sidebar поруч */
+        align-items: flex-start; /* Вирівнювання по верхньому краю */
+        justify-content: space-between;
+    }
+
+    .article-section {
+        flex: 0 0 68%; /* Аналог flex-basis: 68% */
+        order: 1;
+        margin-bottom: 0;
+    }
+
+    .side-panel {
+        flex: 0 0 30%;
+        order: 2;
+        margin-bottom: 0;
+    }
+
+    .featured-image {
+        margin-bottom: 0; /* Прибрати нижній відступ, бо sidebar поруч */
+    }
+}
