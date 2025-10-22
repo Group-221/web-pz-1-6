@@ -23,6 +23,10 @@ header .app-main-btn {
   
   text-transform: uppercase;
 }
+header .app-main-btn {
+  background: var(--button-color-mobile);
+  color: #fff;
+}
 .clearfix::after { content: ""; display: table; clear: both; }
 
 .app-main-wrap {
