@@ -1,0 +1,32 @@
+/* Tablet and Desktop layout changes for GRID */
+
+@media (min-width: 768px) {
+    /* Header */
+    .header .container {
+        grid-template-areas: "logo nav button";
+        grid-template-columns: auto 1fr auto; /* Logo, Nav (fills space), Button */
+        align-items: center;
+        gap: 20px;
+    }
+    .header .nav {
+        display: flex; /* Use flex for simple inline items */
+        justify-content: flex-start;
+        gap: 15px;
+    }
+
+    /* Main layout */
+    .content-wrapper {
+        grid-template-columns: 68% 1fr; /* 2-column layout */
+        gap: 2%;
+        align-items: flex-start;
+    }
+    .main-content {
+        grid-column: 1 / 2;
+    }
+    .sidebar {
+        grid-column: 2 / 3;
+    }
+    .main-image {
+        margin-bottom: 0; /* Remove bottom margin */
+    }
+}

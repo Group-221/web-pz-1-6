@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/flex.css">
+    <link rel="stylesheet" href="css/media-query.css">
+    <link rel="stylesheet" href="css/flex-media-query.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Header</h1>
+            <nav class="nav">
+                <a href="#">nav link 1</a>
+                <a href="#">nav link 2</a>
+                <a href="#">nav link 3</a>
+            </nav>
+            <a href="#" class="button">BUTTON</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <main class="content-wrapper">
+            <article class="main-content">
+                <h1 class="title">Title layout</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                
+                <picture>
+                    <source media="(min-width: 1024px)" srcset="img/main-desktop.jpg">
+                    <source media="(min-width: 768px)" srcset="img/main-table.jpg">
+                    <img src="img/main-mobile.jpg" alt="An autumn forest path" class="main-image">
+                </picture>
+            </article>
+
+            <aside class="sidebar">
+                <h1>Sidebar</h1>
+            </aside>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <h1>Footer</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
+        </div>
+    </footer>
+
+</body>
+</html>
