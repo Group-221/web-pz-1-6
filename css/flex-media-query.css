@@ -1,4 +1,5 @@
 /* Flex media queries to match layout breakpoints */
+/* Медіа-запити для flex-варіанту: змінюють кольори та структуру layout для більших екранів */
 @media (min-width: 768px) {
   header > h2 > a { color: var(--title-color-table); }
   header .app-nav-list a { color: var(--title-color-table); }

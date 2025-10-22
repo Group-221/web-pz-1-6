@@ -1,9 +1,15 @@
-/* Extra small devices (portrait phones, less than 576px)*/
-/* No media query for `xs` since this is the default in Bootstrap*/
-/*utils*/
+/*
+  Загальні утиліти та медіа-запити для перемикання стилів залежно від розміру екрану.
+  Файл містить:
+  - базові стилі заголовків і clearfix
+  - правила для показу різних зображень (mobile/tablet/desktop)
+*/
+
+/* Базові утиліти для всіх екранів (mobile-first) */
 h1 {
   font-size: 32px;
   font-weight: bold;
+  /* використовуємо змінну для кольору заголовка */
   color: var(--title-color-mobile);
   margin: calc(var(--gutter-width) / 2) 0 var(--gutter-width);
 }
@@ -15,23 +21,24 @@ h2 {
   color: var(--title-color-mobile);
 }
 
+/* clearfix для очищення плаваючих елементів */
 .clearfix::after {
   content: "";
   clear: both;
   display: table;
 }
 
-
+/* Приховуємо зображення для більших екранів за замовчуванням */
 .app-table, .app-desktop {
   display: none;
 }
 
-/*Small devices (landscape phones, 576px and up)*/
+/* Small devices (landscape phones, 576px and up) - місце для додаткових правил */
 @media (min-width: 576px) {
 
 }
 
-/*Medium devices (tablets, 768px and up)*/
+/* Medium devices (tablets, 768px and up) - змінюємо кольори і показуємо tablet-зображення */
 @media (min-width: 768px) {
   header > h2 > a {
     color: var(--title-color-table);
@@ -45,55 +52,25 @@ h2 {
     background: var(--button-color-table);
   }
 
-  h1 {
-    color: var(--title-color-table);
-  }
+  h1, h2 { color: var(--title-color-table); }
 
-  h2 {
-    color: var(--title-color-table);
-  }
+  .app-mobile { display: none; } /* ховаємо мобайльну картинку */
 
-  .app-mobile {
-    display: none;
-  }
-
-  .app-table {
-    display: inline;
-  }
+  .app-table { display: inline; } /* показуємо планшетну картинку */
 
 }
 
-/*Large devices (desktops, 992px and up)*/
+/* Large devices (desktops, 992px and up) - показуємо desktop-картинку */
 @media (min-width: 992px) {
-  .app-table {
-    display: none;
-  }
-
-  .app-desktop {
-    display: inline;
-  }
+  .app-table { display: none; }
+  .app-desktop { display: inline; }
 }
 
-/*Extra large devices (large desktops, 1200px and up)*/
+/* Extra large devices (large desktops, 1200px and up) - змінюємо кольори для десктопу */
 @media (min-width: 1200px) {
-  header > h2 > a {
-    color: var(--title-color-desktop);
-  }
-
-  header .app-nav-list > li a {
-    text-decoration: none;
-    color: var(--title-color-desktop);
-  }
-
-  header .app-main-btn {
-    background: var(--button-color-desktop);
-  }
-
-  h1 {
-    color: var(--title-color-desktop);
-  }
-
-  h2 {
-    color: var(--title-color-desktop);
-  }
+  header > h2 > a { color: var(--title-color-desktop); }
+  header .app-nav-list > li a { text-decoration: none; color: var(--title-color-desktop); }
+  header .app-main-btn { background: var(--button-color-desktop); }
+  h1, h2 { color: var(--title-color-desktop); }
 }
+*** End Patch

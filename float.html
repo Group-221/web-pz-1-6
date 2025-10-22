@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/>
-  <title>PZ_1_6</title>
+  <title>PZ_1_6 - Float</title>
+  <!-- Підключаємо загальні стилі та реалізацію через float -->
   <link rel="stylesheet" type="text/css" href="css/reset.css">
   <link rel="stylesheet" type="text/css" href="css/variables.css">
   <link rel="stylesheet" type="text/css" href="css/float.css">
@@ -11,6 +12,7 @@
   <link rel="stylesheet" type="text/css" href="css/float-media-query.css">
 </head>
 <body>
+<!-- Заголовок: тут використані плаваючі елементи (float) для розташування елементів -->
 <header>
   <h2><a href="#">Header</a></h2>
   <nav>
@@ -21,8 +23,11 @@
     </ul>
   </nav>
   <button class="app-main-btn">button</button>
+  <!-- clearfix для очищення плаваючих елементів у заголовку -->
   <div class="clearfix"></div>
 </header>
+
+<!-- Основна обгортка: контент + сайдбар, розташування теж зроблено за допомогою float -->
 <div class="app-main-wrap">
   <section class="app-main">
     <h1>Title layout</h1>
@@ -35,19 +40,25 @@
       of Lorem Ipsum.
     </p>
     <div class="app-bg-cont">
+      <!-- Картинки для різних розмірів екрану -->
       <img class="app-mobile" src="img/main-mobile.jpeg" alt="main-mobile img">
       <img class="app-table" src="img/main-table.jpg" alt="main-table img">
       <img class="app-desktop" src="img/main-desktop.jpg" alt="main-desktop img">
     </div>
   </section>
+
   <aside class="app-sidebar">
     <h2>Sidebar</h2>
   </aside>
+
+  <!-- clearfix для очищення плаваючих елементів у контенті -->
   <div class="clearfix"></div>
 </div>
+
 <footer>
   <h2>Footer</h2>
   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
 </footer>
+
 </body>
 </html>

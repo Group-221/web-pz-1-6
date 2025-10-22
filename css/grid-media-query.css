@@ -1,3 +1,9 @@
+/*
+  grid-media-query.css — медіа-запити для варіанту з CSS Grid.
+  Містить правила для планшетів і десктопів, встановлює grid-розклад
+  на великих екранах і керує показом відповідних зображень.
+*/
+
 @media (min-width: 768px) {
   header > h2 > a { color: var(--title-color-table); }
   header .app-nav-list a { color: var(--title-color-table); }

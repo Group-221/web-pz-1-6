@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/>
   <title>PZ_1_6 - Flex</title>
+  <!-- Підключаємо загальні стилі: скидання, змінні, реалізація flex і медіа-запити -->
   <link rel="stylesheet" type="text/css" href="css/reset.css">
   <link rel="stylesheet" type="text/css" href="css/variables.css">
   <link rel="stylesheet" type="text/css" href="css/flex.css">
@@ -11,8 +12,11 @@
   <link rel="stylesheet" type="text/css" href="css/flex-media-query.css">
 </head>
 <body>
+<!-- Заголовок сайту: реалізований через flex-контейнер для вирівнювання елементів -->
 <header class="site-header">
+  <!-- Логотип/назва -->
   <h2><a href="#">Header</a></h2>
+  <!-- Навігація: список посилань -->
   <nav>
     <ul class="app-nav-list">
       <li><a href="#">nav link 1</a></li>
@@ -20,25 +24,35 @@
       <li><a href="#">nav link 3</a></li>
     </ul>
   </nav>
+  <!-- Кнопка дії в заголовку -->
   <button class="app-main-btn">button</button>
 </header>
+
+<!-- Основна обгортка: містить головний контент та сайдбар -->
 <div class="app-main-wrap">
   <section class="app-main">
+    <!-- Заголовок секції з описом -->
     <h1>Title layout</h1>
     <p class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+    <!-- Блок з фонового зображення/ілюстраціями: різні зображення під різні розміри екранів -->
     <div class="app-bg-cont">
       <img class="app-mobile" src="img/main-mobile.jpeg" alt="main-mobile img">
       <img class="app-table" src="img/main-table.jpg" alt="main-table img">
       <img class="app-desktop" src="img/main-desktop.jpg" alt="main-desktop img">
     </div>
   </section>
+
+  <!-- Сайдбар: може містити додаткові віджети або навігацію -->
   <aside class="app-sidebar">
     <h2>Sidebar</h2>
   </aside>
 </div>
+
+<!-- Футер сайту -->
 <footer>
   <h2>Footer</h2>
   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
 </footer>
+
 </body>
 </html>

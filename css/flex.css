@@ -11,6 +11,24 @@ header, .site-header{
   box-sizing: border-box;
 }
 
+/* Flexbox implementation - mobile first */
+/*
+  flex.css — реалізація макету з використанням Flexbox.
+  Тут:
+  - header зроблений як flex-контейнер для вирівнювання логотипа, навігації та кнопки
+  - основна обгортка залишається адаптивною, а на більших екранах layout змінюється у відповідних медіа-файлах
+*/
+html { font-size: 14px; font-family: Arial; }
+
+header, .site-header{
+  padding: var(--gutter-width) calc(var(--gutter-width) * 2);
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
 header > h2 { margin: 0; }
 header > h2 > a { color: var(--title-color-mobile); font-size: 24px; text-decoration: none; }
 
