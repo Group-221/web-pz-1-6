@@ -1,0 +1,44 @@
+/* Tablet and Desktop layout changes for FLEXBOX */
+
+@media (min-width: 768px) {
+    /* Header */
+    .header .container {
+        flex-direction: row; /* Horizontal layout */
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header .nav {
+        flex-direction: row; /* Horizontal nav */
+        margin: 0;
+        order: 1; /* Move nav before button */
+    }
+     .header .nav a {
+        margin: 0 10px;
+    }
+    .header .logo {
+        order: 0;
+    }
+    .header .button {
+        order: 2;
+    }
+
+    /* Main layout */
+    .content-wrapper {
+        flex-direction: row; /* Side-by-side layout */
+        justify-content: space-between;
+        align-items: flex-start; /* Align to top */
+    }
+    .main-content {
+        flex-basis: 68%;
+        order: 1;
+        margin-bottom: 0;
+    }
+    .sidebar {
+        flex-basis: 30%;
+        order: 2;
+        margin-bottom: 0; /* Remove mobile margin */
+    }
+    .main-image {
+        margin-bottom: 0; /* Remove bottom margin since sidebar is next to it */
+    }
+}
