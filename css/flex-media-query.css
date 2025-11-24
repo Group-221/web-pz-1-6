@@ -1,0 +1,54 @@
+/* ===== Small (≥576px) ===== */
+@media (min-width:576px){}
+
+/* ===== Tablet (≥768px) ===== */
+@media (min-width:768px){}
+
+/* ===== Desktop (≥992px) ===== */
+@media (min-width:992px){
+  .app-main-wrap{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    align-items:stretch;  /* Sidebar тягнеться вниз */
+    gap:0;
+    min-height:calc(100vh - var(--header-height) - var(--footer-height));
+  }
+
+  .app-main{
+    flex:1 1 calc(75% - var(--gutter-width));
+    margin-right:var(--gutter-width);
+    min-width:0;
+    display:flex; flex-direction:column;
+    box-sizing:border-box;
+  }
+
+  .app-sidebar{
+    flex:0 0 calc(25% - var(--gutter-width));
+    display:flex; flex-direction:column;
+    box-sizing:border-box;
+
+    margin-top: var(--gutter-width);
+  }
+
+  .app-bg-cont{ margin-top: calc(var(--gutter-width) * 1.25); }
+}
+
+/* ===== XL (≥1200px) ===== */
+@media (min-width:1200px){}
+
+/* Tablet (≥768px) */
+@media (min-width: 768px){
+  header{
+    flex-wrap: nowrap;         
+  }
+
+  header h2{  flex: 0 0 auto; }
+  header nav{ flex: 1 1 auto; }
+  header .app-main-btn{
+    flex: 0 0 auto;
+    margin-left: auto;        
+    align-self: center;
+    width: auto;            
+  }
+}
